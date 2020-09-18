@@ -1,8 +1,8 @@
-deg2rad = pi/180;      % conversion factor from degs to radians
-rad2deg = 1/deg2rad;   % conversion factor from radians to degs
-gV = 0.146418;         % g/V
-tan_theta0 = 0.14;     % tan(theta0)
-alpha0 = 8*deg2rad;    % (rad)
+deg2rad = pi/180;      
+rad2deg = 1/deg2rad;   
+gV = 0.146418;         
+tan_theta0 = 0.14;     
+alpha0 = 8*deg2rad;    
 
 Ybeta = ureal('Ybeta',-0.082,'Percentage',10);
 Yp = ureal('Yp',0.010827,'Percentage',10);
