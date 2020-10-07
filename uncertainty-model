@@ -1,0 +1,10 @@
+gamma = ureal('gamma',4,'range',[3 5]);
+tau = ureal('tau',.5,'Percentage',30);
+P = tf(gamma,[tau 1])
+
+KI = 1/(2*tau.Nominal*gamma.Nominal);
+C = tf(KI,[1 0]);
+CLP = feedback(P*C,1)
+
+subplot(2,1,1); step(P), title('Plant response (20 samples)')
+subplot(2,1,2); step(CLP), title('Closed-loop response (20 samples)')
